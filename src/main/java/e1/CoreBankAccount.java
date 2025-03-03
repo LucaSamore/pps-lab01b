@@ -1,6 +1,6 @@
 package e1;
 
-class CoreBankAccount {
+public final class CoreBankAccount {
 
     private int balance = 0;
 
@@ -8,11 +8,12 @@ class CoreBankAccount {
         return this.balance;
     }
 
-    public void deposit(int amount) {
+    public void deposit(final int amount) {
         this.balance = this.balance + amount;
     }
 
-    public void withdraw(int amount) {
+    public void withdraw(final int amount) {
         this.balance = this.balance - amount;
     }
+
 }
