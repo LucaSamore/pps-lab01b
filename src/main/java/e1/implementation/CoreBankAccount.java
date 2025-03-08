@@ -1,19 +1,24 @@
 package e1.implementation;
 
-public final class CoreBankAccount {
+import e1.BankAccount;
+
+final class CoreBankAccount implements BankAccount {
 
     private int balance = 0;
 
-    public int getBalance() {
-        return this.balance;
-    }
-
+    @Override
     public void deposit(final int amount) {
         this.balance = this.balance + amount;
     }
 
+    @Override
     public void withdraw(final int amount) {
         this.balance = this.balance - amount;
+    }
+
+    @Override
+    public int getBalance() {
+        return this.balance;
     }
 
 }

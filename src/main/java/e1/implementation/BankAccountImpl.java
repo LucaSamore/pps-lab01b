@@ -6,11 +6,11 @@ import e1.OverdraftPolicy;
 
 final class BankAccountImpl implements BankAccount {
 
-    private final CoreBankAccount core;
+    private final BankAccount core;
     private final FeeCalculator feeCalculator;
     private final OverdraftPolicy overdraftPolicy;
 
-    BankAccountImpl(final CoreBankAccount core,
+    BankAccountImpl(final BankAccount core,
                     final FeeCalculator feeCalculator,
                     final OverdraftPolicy overdraftPolicy) {
         this.core = core;
