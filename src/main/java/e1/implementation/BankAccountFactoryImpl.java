@@ -2,7 +2,6 @@ package e1.implementation;
 
 import e1.BankAccount;
 import e1.BankAccountFactory;
-import e1.CoreBankAccount;
 
 public final class BankAccountFactoryImpl implements BankAccountFactory {
 
@@ -17,7 +16,11 @@ public final class BankAccountFactoryImpl implements BankAccountFactory {
 
     @Override
     public BankAccount createSilverAccount() {
-        return null;
+        return new BankAccountImpl(
+          new CoreBankAccount(),
+          amount -> 1,
+          (balance, amount) -> balance >= amount
+        );
     }
 
     @Override

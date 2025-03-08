@@ -1,4 +1,4 @@
-package e1;
+package e1.implementation;
 
 public final class CoreBankAccount {
 

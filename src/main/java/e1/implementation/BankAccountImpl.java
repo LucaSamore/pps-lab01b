@@ -1,7 +1,6 @@
 package e1.implementation;
 
 import e1.BankAccount;
-import e1.CoreBankAccount;
 import e1.FeeCalculator;
 import e1.OverdraftPolicy;
 
@@ -18,7 +17,6 @@ final class BankAccountImpl implements BankAccount {
         this.feeCalculator = feeCalculator;
         this.overdraftPolicy = overdraftPolicy;
     }
-
 
     @Override
     public void deposit(final int amount) {
