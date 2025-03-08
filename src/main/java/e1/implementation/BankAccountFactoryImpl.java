@@ -5,6 +5,7 @@ import e1.BankAccountFactory;
 import e1.CoreBankAccount;
 
 public final class BankAccountFactoryImpl implements BankAccountFactory {
+
     @Override
     public BankAccount createBronzeAccount() {
         return new BankAccountImpl(
@@ -21,6 +22,11 @@ public final class BankAccountFactoryImpl implements BankAccountFactory {
 
     @Override
     public BankAccount createGoldAccount() {
-        return null;
+        return new BankAccountImpl(
+          new CoreBankAccount(),
+          amount -> 0,
+          (balance, amount) -> balance - amount >= -500
+        );
     }
+
 }
