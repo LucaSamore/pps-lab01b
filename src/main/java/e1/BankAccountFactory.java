@@ -6,4 +6,6 @@ public interface BankAccountFactory {
     BankAccount createSilverAccount();
 
     BankAccount createGoldAccount();
+
+    BankAccount createAccount(FeeCalculator feeCalculator, OverdraftPolicy overdraftPolicy);
 }

@@ -63,4 +63,10 @@ public final class BankAccountFactoryImpl implements BankAccountFactory {
         return AccountType.GOLD.createAccount();
     }
 
+    @Override
+    public BankAccount createAccount(final FeeCalculator feeCalculator,
+                                     final OverdraftPolicy overdraftPolicy) {
+        return new BankAccountImpl(new CoreBankAccount(), feeCalculator, overdraftPolicy);
+    }
+
 }
